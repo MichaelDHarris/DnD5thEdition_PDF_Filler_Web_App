@@ -1,0 +1,17 @@
+<h1>Create a New Character</h1>
+
+<%= form_with url: "/characters", method: :post do |form| %>
+  <div>
+    <%= form.label :name, "Character Name" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :race, "Race" %>
+    <%= form.select :race, ["Elf", "Dwarf", "Human", "Halfling"] %>
+  </div>
+
+  <div>
+    <%= form.submit "Generate PDF" %>
+  </div>
+<% end %>
