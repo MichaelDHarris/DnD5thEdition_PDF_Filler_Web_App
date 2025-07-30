@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   Rails.application.routes.draw do
-    root "characters#new"  # sets homepage to the new character form
+    root "characters#new"
+    post "/characters", to: "characters#create"
   end
 
 
