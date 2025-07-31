@@ -1,6 +1,7 @@
 class CharactersController < ApplicationController
   def new
     # Renders the form
+    @races = Race.all
   end
 
   def create

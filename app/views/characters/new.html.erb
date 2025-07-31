@@ -6,7 +6,7 @@
 
   <div>
     <%= form.label :race, "Race" %>
-    <%= form.select :race, ["Elf", "Dwarf", "Human", "Halfling"] %>
+    <%= form.select :race, @races.map { |r| [r.name, r.name] }, prompt: "Choose a race" %>
   </div>
 
   <div>
